@@ -18,9 +18,10 @@ body {
 .box {
     background-color: rgba(12, 84, 125, 0.5);
     border: 1px solid rgb(7, 255, 255);
+    margin: 20px;
     padding: 20px;
-    width: 600px;
-    height: 600px;
+    width: auto;
+    height: auto;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -99,17 +100,73 @@ h1 {
     opacity: 1;
     visibility: visible;
 }
+@media (max-width: 991px) {
+    /* Styles for screens with a maximum width of 991px */
+    .round-image {
+        width: 150px;
+        height: 150px;
+    }
 
-@media (max-width: 768px) {
-    body {
-        width: 90%;
-        margin: 20px auto;
+    .box {
+        width: 500px;
+        height: 500px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .icon-name {
+        font-size: 20px;
     }
 }
 
-@media (max-width: 480px) {
-    body {
-        width: 100%;
-        margin: 10px auto;
+@media (max-width: 768px) {
+    /* Styles for screens with a maximum width of 768px */
+    .round-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .box {
+        width: 400px;
+        height: 500px;
+    }
+    .icon {
+        width: 70px;
+        height: 50px;
+        top: 40px;
+    }
+
+    h1 {
+        position: relative;
+        bottom: -40px;
+        font-size: 23px;
+    }
+
+
+    .icon-name {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 420px) {
+    /* Styles for screens with a maximum width of 420px */
+    .round-image {
+        width: 50px;
+        height: 50px;
+    }
+
+    .box {
+        width: 300px;
+        height: 300px;
+    }
+
+    h1 {
+        font-size: 16px;
+    }
+
+    .icon-name {
+        font-size: 16px;
     }
 }
