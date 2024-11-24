@@ -1,0 +1,115 @@
+body {
+    font-family: "Sevillana", serif;
+    background: url(/img/Screenshot_20241121_194843.jpg) no-repeat fixed center/cover;
+}
+
+.round-image {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -140%);
+    border-radius: 50%;
+    border: 2px solid rgb(255, 0, 0);
+    object-fit: cover;
+}
+
+.box {
+    background-color: rgba(12, 84, 125, 0.5);
+    border: 1px solid rgb(7, 255, 255);
+    padding: 20px;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+h1 {
+    color: rgb(255, 20, 20);
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 0.1px rgb(255, 0, 0);
+}
+
+.social-icon {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    justify-content: center;
+    
+}
+
+.icon {
+    position: relative;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    text-decoration: none;
+}
+
+.icon-image, .hover-image {
+    image-rendering: auto;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 50%;
+}
+
+.hover-image {
+    opacity: 0;
+}
+
+.icon:hover .icon-image {
+    opacity: 0;
+}
+
+.icon:hover .hover-image {
+    opacity: 1;
+}
+
+
+.icon-name {
+    position: absolute;
+    bottom: -80px;
+    left: 80%;
+    transform: translateX(-50%);
+    font-size: 26px;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+    opacity: 0;
+    text-shadow: 
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 40px #0ff;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.icon:hover .icon-name {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 768px) {
+    body {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        width: 100%;
+        margin: 10px auto;
+    }
+}
